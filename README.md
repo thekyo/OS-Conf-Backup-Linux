@@ -23,8 +23,9 @@ Create a backup data directory, assign write permissions to the `adm` group and 
 
 Clone the backup script from its public repository into the `bin` subdirectory and make it executable:
 
-    git clone https://github.com/vastlimits/OS-Conf-Backup-Linux.git /backup/bin
+    git clone https://github.com/thekyo/OS-Conf-Backup-Linux.git /backup/bin
     chmod 774 /backup/bin/copy_files.sh
+    chmod 774 /backup/bin/get_file_list.sh
 
 ##  Git Configuration
 
@@ -87,6 +88,11 @@ Run the script:
 
     cd /backup/data/
     /backup/bin/copy_files.sh
+
+Run the script:
+
+    cd /backup/data/
+    /backup/bin/get_file_list.sh /etc/httpd
 
 Commit to the local repository and push to GitHub:
 
